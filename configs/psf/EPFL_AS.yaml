@@ -1,0 +1,6 @@
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
+_target_: smlmshot.simulation.psfs.CSplinesPSF.init_from_mat
+filepath: "data/EPFL_PSFs/spline_calibration_3d_as_3dcal.mat"
+pixel_size: 100.0

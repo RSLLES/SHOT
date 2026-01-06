@@ -1,0 +1,6 @@
+_target_: smlmshot.writers.ASHWriter
+filepath: null
+img_size: 128
+pixel_size: ${psf.pixel_size}
+magnification: 4
+sharpening_factor: 2

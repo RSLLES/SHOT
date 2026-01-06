@@ -1,0 +1,12 @@
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
+# Info from https://github.com/Li-Lab-SUSTech/LiteLoc/blob/ee00bad84f725aa7337984978ef06f59c1900651/demo/demo1_astig_npc/train_params_demo1.yaml#L1
+_target_: smlmshot.simulation.Camera
+adu_baseline: 100
+em_gain: 1.0
+inv_e_adu: "${eval: 1.0 / 0.7471}"
+quantum_efficiency: 0.95
+readout_noise: 1.535
+spurious_charge: 0.002
+type: "sCMOS"

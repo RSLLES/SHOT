@@ -1,0 +1,17 @@
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
+defaults:
+  - _self_
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+
+# optionnal debugging flags
+runtime:
+  detect_anomaly: false
+  profile: false
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .

@@ -1,0 +1,11 @@
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
+_target_: smlmshot.simulation.Camera
+adu_baseline: 100
+em_gain: 300
+inv_e_adu: "${eval: 1.0 / 45}"
+quantum_efficiency: 0.9
+readout_noise: 74.4
+spurious_charge: 0.002
+type: "EMCCD"

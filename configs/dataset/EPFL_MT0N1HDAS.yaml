@@ -1,0 +1,17 @@
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
+_target_: smlmshot.datasets.ImagesAndActivationsDataset
+y:
+  _target_: smlmshot.utils.images.read_tiff
+  filepath: data/EPFL_MT0N1HDAS/sequence-as-stack-MT0.N1.HD-AS-Exp.tif
+x:
+  _target_: smlmshot.utils.activations.add_significant
+  x:
+    _target_: smlmshot.utils.activations.subtract_frame_offset
+    frame_offset: 1
+    x:
+      _target_: smlmshot.utils.activations.read_csv
+      columns: [frame, xnano, ynano, znano, intensity]
+      filepath: data/EPFL_MT0N1HDAS/activations.csv
+window: ${runtime.n_frames}

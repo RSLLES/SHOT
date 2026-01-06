@@ -1,0 +1,10 @@
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
+_target_: smlmshot.models.SHOT
+camera: ${camera}
+inner_dim: 96
+n_frames: ${runtime.n_frames}
+n_iters: 2
+pixel_size: ${psf.pixel_size}
+psf: ${psf}

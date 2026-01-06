@@ -1,0 +1,23 @@
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
+repos:
+  - repo: local
+    hooks:
+      - id: license_header
+        name: license_header
+        entry: python .pre-commit-scripts/add_license_header.py
+        language: python
+        files: \.(py|sh|yaml|yml)$
+  - repo: local
+    hooks:
+      - id: exported_symbols
+        name: exported_symbols
+        entry: python .pre-commit-scripts/exported_symbols.py
+        language: python
+        files: ^src/.*/__init__\.py$
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.13.3
+    hooks:
+      - id: ruff-check
+      - id: ruff-format

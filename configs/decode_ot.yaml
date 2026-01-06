@@ -1,0 +1,11 @@
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
+defaults:
+  - decode
+  - dataset@ds_calib: one_synthetic_simulated_scene_calib
+  - override trainer: ot
+  - override model: decode_ot
+  - _self_
+
+name: decode_ot

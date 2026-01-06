@@ -1,0 +1,7 @@
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
+# see https://github.com/Li-Lab-SUSTech/LiteLoc/blob/ee00bad84f725aa7337984978ef06f59c1900651/demo/demo1_astig_npc/train_params_demo1.yaml#L10
+_target_: smlmshot.simulation.psfs.CSplinesPSF.init_from_mat
+filepath: "data/LiteLoc_NPC_U2OS/Astigmatism_Tetraspeck_beads_2um_50nm_256_1_MMStack_Pos0.ome_3dcal.mat"
+pixel_size: 110.0

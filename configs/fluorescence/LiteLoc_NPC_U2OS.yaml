@@ -1,0 +1,11 @@
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
+bg_photon_mean: 200.0
+bg_photon_std: 0.0
+n_acts_per_frame: 100
+photon_flux_mean: 12e3
+photon_flux_std: 0.0
+time_bleach: 1.5
+time_off: 3.0
+time_on: 2.5

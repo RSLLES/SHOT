@@ -1,0 +1,36 @@
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
+defaults:
+  - psf: LiteLoc_NPC_U2OS
+  - camera: LiteLoc_NPC_U2OS
+  - fluorescence: LiteLoc_NPC_U2OS
+  - dataset@ds_test: LiteLoc_NPC_U2OS
+  - runtime: default
+  - optimizer: adamw
+  - scheduler: cosineannealing
+  - model: shot
+  - writer: csv
+  - _self_
+  - hydra_defaults
+
+optimizer:
+  lr: 0.0006
+
+ds_train:
+  length: ${eval:2**17}
+  jitter_std: 0.03
+
+ds_val:
+  length: 256
+  jitter_std: 0.03
+
+trainer:
+  reg: 1e-4
+  n_sinkhorn_iters: 20
+
+runtime:
+  name: shot_LiteLoc_NPC_U2OS
+
+writer:
+  filepath: "exports/shot_LiteLoc_NPC_U2OS.csv"

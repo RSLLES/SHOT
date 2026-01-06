@@ -1,0 +1,12 @@
+__pycache__
+*.csv
+*.egg-info/
+*.mat
+*.tif
+*.tiff
+*.vscode
+*.zip
+exports/**
+outputs/**
+profile/**
+uv.lock

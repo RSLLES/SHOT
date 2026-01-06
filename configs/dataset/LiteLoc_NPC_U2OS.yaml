@@ -1,0 +1,15 @@
+# This source code is licensed under the license found in the
+# LICENSE file in the root directory of this source tree.
+
+_target_: smlmshot.datasets.ImagesDataset
+y:
+  _target_: smlmshot.utils.images.standardize_background
+  y:
+    _target_: torch.cat
+    dim: 0
+    tensors:
+      - _target_: smlmshot.utils.images.read_tiff
+        filepath: data/LiteLoc_NPC_U2OS/NPC_U2OS_640_40mw_20ms_256_2_MMStack_Pos0.ome.tif
+      - _target_: smlmshot.utils.images.read_tiff
+        filepath: data/LiteLoc_NPC_U2OS/NPC_U2OS_640_40mw_20ms_256_2_MMStack_Pos0_1.ome.tif
+window: ${runtime.n_frames}
